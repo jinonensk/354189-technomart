@@ -65,7 +65,7 @@
               <!-- тут подразумевается что дрели ведут на страницу дрелей? А след.слайд на страницу перфораторов?
               Т.е. здесь не будет линки, а там на catalog-page правильно?
               И кнопки, они привязаны к слайдеру и линка на каталог. Или их нужно отдельно выносить, а менять только картинку и текст? -->
-              <li class="drills">
+              <li class="slide-drills">
                 <h3>Дрели</h3>
                 <p>Соседям на радость</p>
                 <figure class="offers-slider-content">
@@ -75,7 +75,7 @@
                 <button class="button slider-button slider-button-next" type="button">Вперед</button>
                 <a href="#">Открыть каталог</a>
               </li>
-              <li class="perforators">
+              <li class="slide-perforators">
                 <h3>Перфораторы</h3>
                 <p>Настоящие мужские игрушки</p>
                 <figure class="offers-slider-content">
@@ -211,7 +211,7 @@
       <section class="services">
         <h2>Сервисы</h2>
         <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил чтобы сделать ваши покупки приятными.</p>
-        <ul class="services-slider">
+        <ul class="services-slider-controls">
           <li>
             <button class="button services-button services-button-delivery" type="button">Доставка</button>
           </li>
@@ -222,14 +222,29 @@
             <button class="button services-button services-button-credit" type="button">Кредит</button>
           </li>
         </ul>
-        <div class="slide-delivery">
-          <h3>Доставка</h3>
-          <p>Мы с удовольствием доставим ваш товар прямо<br>
-            к вашему подъезду совершенно беслплатно!
-            Ведь мы неплохо заработаем,<br>
-            поднимая его на ваш этаж.</p>
-          <!-- Здесь будет фоновая картинка "img/delivery.jpg" -->
-        </div>
+        <ul class="services-slider">
+          <li class="slide-delivery">
+            <h3>Доставка</h3>
+            <p>Мы с удовольствием доставим ваш товар прямо<br>
+              к вашему подъезду совершенно беслплатно! Ведь мы неплохо заработаем,<br>
+              поднимая его на ваш этаж.</p>
+            <!-- Здесь будет фоновая картинка "img/delivery.jpg" -->
+          </li>
+          <li class="slide-guarantee">
+            <h3>Гарантия</h3>
+            <p>Если купленный у нас товар поломается или заискрит,<br>
+              а также в случае пожара, спровоцированного его возгаранием,  вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый.<br>
+              Дом уж восстановите как-нибудь сами.</p>
+            <!-- Здесь будет фоновая картинка "img/delivery.jpg" -->
+          </li>
+          <li class="slide-credit">
+            <h3>Кредит</h3>
+            <p>Залезть в долговую яму стало проще!<br>
+              Кредитные консультанты придут вам на помощь.</p>
+            <a class="button" href="#">Отправить заявку</a>
+            <!-- Здесь будет фоновая картинка "img/delivery.jpg" -->
+          </li>
+        </ul>
       </section>
 
       <section class="about-company">
