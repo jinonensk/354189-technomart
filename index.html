@@ -47,45 +47,55 @@
     <main class="container">
       <section class="offers-block">
         <h2 class="visually-hidden"></h2>Актуальные преложения</h2>
-        <!-- возможно сдесь тоже через список лучше было, но уж оч визульно тянет таблцу сделать из-за слайдера... -->
-        <table>
-          <tr>
-            <td class="offers-block-new">
-              <h3>Материалы</h3>
-              <a href="#" class="button">На любой вкус</a>
-            </td>
-            <td>
-              <h3>Инструменты</h3>
-              <a href="#" class="button">На все случаи жизни</a>
-            </td>
-            <td>
-              <h3>Техника</h3>
-              <a href="#" class="button">Для стройки</a>
-            </td>
-          </tr>
-          <tr>
-            <td class="offers-slider" rowspan="2" colspan="2">
-              <h3>Дрели</h3>
-              <p>Соседям на радость</p>
-              <figure class="offers-slider-content">
-                  <img src="img/drill.jpg" alt="Дрели">
-              </figure>
-              <button class="button slider-button slider-button-back" type="button">Назад</button>
-              <button class="button slider-button slider-button-next" type="button">Вперед</button>
-              <a href="catalog.html">Открыть каталог</a>
-            </td>
-            <td>
-              <h3>Скидки 50%</h3>
-              <a href="#" class="button">На 350 тоаров</a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <h3>Доставка</h3>
-              <a href="#" class="button">Бесплатно</a>
-            </td>
-          </tr>
-        </table>
+        <ul>
+          <li class="offers-block-new">
+            <h3>Материалы</h3>
+            <a href="#" class="button">На любой вкус</a>
+          </li>
+          <li>
+            <h3>Инструменты</h3>
+            <a href="#" class="button">На все случаи жизни</a>
+          </li>
+          <li>
+            <h3>Техника</h3>
+            <a href="#" class="button">Для стройки</a>
+          </li>
+          <li>
+            <ul class="offers-block-slider">
+              <!-- тут подразумевается что дрели ведут на страницу дрелей? А след.слайд на страницу перфораторов?
+              Т.е. здесь не будет линки, а там на catalog-page правильно?
+              И кнопки, они привязаны к слайдеру и линка на каталог. Или их нужно отдельно выносить, а менять только картинку и текст? -->
+              <li class="drills">
+                <h3>Дрели</h3>
+                <p>Соседям на радость</p>
+                <figure class="offers-slider-content">
+                    <img src="img/drill.jpg" alt="Дрели">
+                </figure>
+                <button class="button slider-button slider-button-back" type="button">Назад</button>
+                <button class="button slider-button slider-button-next" type="button">Вперед</button>
+                <a href="#">Открыть каталог</a>
+              </li>
+              <li class="perforators">
+                <h3>Перфораторы</h3>
+                <p>Настоящие мужские игрушки</p>
+                <figure class="offers-slider-content">
+                    <img src="img/perforators.jpg" alt="Перфораторы">
+                </figure>
+                <button class="button slider-button slider-button-back" type="button">Назад</button>
+                <button class="button slider-button slider-button-next" type="button">Вперед</button>
+                <a href="catalog-page.html">Открыть каталог</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h3>Скидки 50%</h3>
+            <a href="#" class="button">На 350 тоаров</a>
+          </li>
+          <li>
+            <h3>Доставка</h3>
+            <a href="#" class="button">Бесплатно</a>
+          </li>
+        </ul>
       </section>
 
       <section class="popular-items">
