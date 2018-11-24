@@ -11,11 +11,9 @@
     <div class="main-header-logo">
       <p>Техномарт</p>
     </div>
-    <form class="main-geader-search">
-      <!-- здесь будет поиск
-        <label>
-          <input type="search" placeholder="Поиск">
-        </label> -->
+    <form class="main-header-search">
+      <label for="search" class="visually-hidden">Поиск</label>
+      <input type="search" name="main-header-search" id="search" placeholder="Поиск">
     </form>
     <a class="button bookmarks-empty" href="#">Закладки: 0</a>
     <a class="button cart-empty" href="#">Корзина: 0</a>
@@ -33,7 +31,7 @@
         <a class="button" href="#">Регистрация</a>
       </li>
     </ul>
-    <nav class="main-header-navigation">
+    <nav class="main-header-navigation" aria-label="Содержимое">
       <ul class="site-navigation">
         <li class="site-navigation-current"><a>Главная</a></li>
         <li><a href="#">Компания</a></li>
@@ -283,7 +281,7 @@
     <div class="footer-logo">
       <p>Техномарт</p>
     </div>
-    <nav class="footer-navigation-top">
+    <nav class="footer-navigation-top" aria-label="Содержимое">
       <ul class="site-navigation">
         <li><a href="#">Компания</a></li>
         <li><a href="#">Новости</a></li>
@@ -296,7 +294,7 @@
       г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
       +7 (812) 555-05-55
     </p>
-    <nav class="footer-navigation-bottom">
+    <nav class="footer-navigation-bottom" aria-label="Разделы">
       <ul class="site-navigation">
         <li><a href="#">Материалы</a></li>
         <li><a href="#">Техника</a></li>
@@ -308,10 +306,10 @@
       © 2010–2017 Компания «Техномарт»
       Все права защищены
     </p>
-    <ul>
-      <li><a class="social-button" href="#">Вконтакте</a></li>
-      <li><a class="social-button" href="#">Фейсбук</a></li>
-      <li><a class="social-button" href="#">Инстаграм</a></li>
+    <ul aria-label="Мы в социальных сетях">
+      <li><a class="social-button" href="#" aria-label="Вконтакте"></a></li>
+      <li><a class="social-button" href="#" aria-label="Фейсбук"></a></li>
+      <li><a class="social-button" href="#" aria-label="Инстаграм"></a></li>
     </ul>
     <div class="feedback-block">
       <p class="feedback-block-item">
@@ -324,6 +322,30 @@
       </p>
     </div>
   </footer>
+
+  <!-- Попап "Форма обратной связи" начало-->
+  <section class="popup-letter">
+    <form class="popup-letter-form">
+      <h1 class="visually-hidden">Форма отрпавки письма</h1>
+      <ui>
+        <li>
+          <lable for="user-name">Ваше имя:</lable>
+          <input type="text" name="user-name" id="user-name" placeholder="Имя Фамилия">
+        </li>
+        <li>
+          <lable for="user-email">Ваш e-mail:</lable>
+          <input type="email" name="user-email" id="user-email" placeholder="email@example.com">
+        </li>
+        <li>
+          <lable class="visually-hidden" for="user-text">Текст письма</lable>
+          <textarea name="user-text" id="user-text" rows="5" placeholder="В свободной форме"></textarea>
+        </li>
+      </ui>
+      <button class="button letter-button letter-button-send" type="submit">Отправить</button>
+      <button class="button letter-button letter-button-close"type="button">Закрыть</button>
+    </form>
+    <!-- Попап "Форма обратной связи" конец-->
+</section>
 </body>
 
 </html>

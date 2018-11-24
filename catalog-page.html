@@ -22,7 +22,7 @@
       <a class="main-header-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
       <p class="main-header-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
     </div>
-    <nav class="account-navigation">
+    <nav class="account-navigation" aria-label="Меню пользователя">
       <a class="button account-button" href="#">Равшан Джамшутович</a>
       <ul>
         <li>
@@ -33,7 +33,7 @@
         </li>
       </ul>
     </nav>
-    <nav class="main-header-navigation">
+    <nav class="main-header-navigation" aria-label="Содержимое">
       <ul class="site-navigation">
         <li class="site-navigation-current"><a href="index.html">Главная</a></li>
         <li><a href="#">Компания</a></li>
@@ -56,7 +56,49 @@
     <h2>Перфораторы</h2>
     <section class="filters">
       <h3>Фильтр</h3>
-      <!-- Здесь будет форма с фильтрами -->
+      <!-- Здесь штука с двойным ползунком -->
+
+      <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+        <fieldset>
+          <legend>Производители:</legend>
+          <ul class="filter-manufacturers">
+            <li>
+              <input class="filter-checkbox filter-checkbox-on" type="checkbox" name="bosch" id="filter-bosch" checked>
+              <label for="filter-bosch">Bosch</label>
+            </li>
+            <li>
+              <input class="filter-checkbox filter-checkbox-off" type="checkbox" name="interscol" id="filter-interscol">
+              <label for="filter-interscol">Интерскол</label>
+            </li>
+            <li>
+              <input class="filter-checkbox filter-checkbox-on" type="checkbox" name="makita" id="filter-makita" checked>
+              <label for="filter-makita">Makita</label>
+            </li>
+            <li>
+              <input class="filter-checkbox filter-checkbox-off" type="checkbox" name="dewalt" id="filter-dewalt">
+              <label for="filter-dewalt">Dewalt</label>
+            </li>
+            <li>
+              <input class="filter-checkbox filter-checkbox-on" type="checkbox" name="hitachi" id="filter-hitachi">
+              <label for="filter-hitachi">Hitachi</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Питание:</legend>
+          <ul>
+            <li class="filter-power">
+              <input class="filter-radio filter-radio-on" type="radio" name="power-group" value="accumulator" id="filter-acc" checked>
+              <label for="filter-acc">Аккумуляторные</label>
+            </li>
+            <li class="filter-option">
+              <input class="filter-radion filter-radio-off" type="radio" name="power-group" value="electric" id="filter-electric">
+              <label for="filter-electric">Сетевые</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button type="submit" class="button filter-power-button">Показать</button>
+      </form>
     </section>
 
     <section class="sorting-section">
@@ -75,10 +117,10 @@
         </ul>
         <ul class="sort-by-queue">
           <li>
-            <button class="sorting-button sorting-button-up" type="button"></button>
+            <button class="sorting-button sorting-button-up" type="button">По возрастарнию</button>
           </li>
           <li>
-            <button class="sorting-button sorting-button-down" type="button"></button>
+            <button class="sorting-button sorting-button-down" type="button">По убыванию</button>
           </li>
         </ul>
       </nav>
@@ -217,7 +259,7 @@
           </p>
         </li>
       </ul>
-      <ul class="pagination-list">
+      <ul class="pagination-list" aria-label="Страницы товаров">
         <li class="pagination-item pagination-item-current">
           <a href="#">1</a>
         </li>
@@ -247,7 +289,7 @@
     <div class="footer-logo">
       <p>Техномарт</p>
     </div>
-    <nav class="footer-navigation-top">
+    <nav class="footer-navigation-top" aria-label="Содержимое">
       <ul class="site-navigation">
         <li><a href="#">Компания</a></li>
         <li><a href="#">Новости</a></li>
@@ -260,7 +302,7 @@
       г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
       +7 (812) 555-05-
     </p>
-    <nav class="footer-navigation-bottom">
+    <nav class="footer-navigation-bottom" aria-label="Разделы">
       <ul class="site-navigation">
         <li><a href="#">Материалы</a></li>
         <li><a href="#">Техника</a></li>
@@ -272,10 +314,10 @@
       © 2010–2017 Компания «Техномарт»
       Все права защищены
     </p>
-    <ul>
-      <li><a class="social-button" href="#">Вконтакте</a></li>
-      <li><a class="social-button" href="#">Фейсбук</a></li>
-      <li><a class="social-button" href="#">Инстаграм</a></li>
+    <ul aria-label="Мы в социальных сетях">
+      <li><a class="social-button" href="#" aria-label="Вконтакте"></a></li>
+      <li><a class="social-button" href="#" aria-label="Фейсбук"></a></li>
+      <li><a class="social-button" href="#" aria-label="Инстаграм"></a></li>
     </ul>
     <div class="feedback-block">
       <p class="feedback-block-item">
