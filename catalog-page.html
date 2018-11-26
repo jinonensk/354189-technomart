@@ -63,23 +63,23 @@
           <legend>Производители:</legend>
           <ul class="filter-manufacturers">
             <li>
-              <input class="filter-checkbox filter-checkbox-on" type="checkbox" name="bosch" id="filter-bosch" checked>
+              <input class="filter-checkbox" type="checkbox" name="bosch" id="filter-bosch" checked>
               <label for="filter-bosch">Bosch</label>
             </li>
             <li>
-              <input class="filter-checkbox filter-checkbox-off" type="checkbox" name="interscol" id="filter-interscol">
+              <input class="filter-checkbox" type="checkbox" name="interscol" id="filter-interscol">
               <label for="filter-interscol">Интерскол</label>
             </li>
             <li>
-              <input class="filter-checkbox filter-checkbox-on" type="checkbox" name="makita" id="filter-makita" checked>
+              <input class="filter-checkbox" type="checkbox" name="makita" id="filter-makita" checked>
               <label for="filter-makita">Makita</label>
             </li>
             <li>
-              <input class="filter-checkbox filter-checkbox-off" type="checkbox" name="dewalt" id="filter-dewalt">
+              <input class="filter-checkbox" type="checkbox" name="dewalt" id="filter-dewalt">
               <label for="filter-dewalt">Dewalt</label>
             </li>
             <li>
-              <input class="filter-checkbox filter-checkbox-on" type="checkbox" name="hitachi" id="filter-hitachi">
+              <input class="filter-checkbox" type="checkbox" name="hitachi" id="filter-hitachi">
               <label for="filter-hitachi">Hitachi</label>
             </li>
           </ul>
@@ -88,16 +88,16 @@
           <legend>Питание:</legend>
           <ul>
             <li class="filter-power">
-              <input class="filter-radio filter-radio-on" type="radio" name="power-group" value="accumulator" id="filter-acc" checked>
+              <input class="filter-radio" type="radio" name="power-group" value="accumulator" id="filter-acc" checked>
               <label for="filter-acc">Аккумуляторные</label>
             </li>
             <li class="filter-option">
-              <input class="filter-radion filter-radio-off" type="radio" name="power-group" value="electric" id="filter-electric">
+              <input class="filter-radion" type="radio" name="power-group" value="electric" id="filter-electric">
               <label for="filter-electric">Сетевые</label>
             </li>
           </ul>
         </fieldset>
-        <button type="submit" class="button filter-power-button">Показать</button>
+        <button class="button filter-power-button">Показать</button>
       </form>
     </section>
 
@@ -330,6 +330,15 @@
       </p>
     </div>
   </footer>
+
+  <!-- Попап "Товар добавлен в карзину" начало-->
+  <section class="item-added">
+    <h1>Товар добавлен в карзину!</h1>
+    <a class="button item-added-button item-added-button-checkout" href="#">Оформить заказ</a>
+    <button class="button item-added-button item-added-button-continue" type="button">Продолжить покупки</button>
+    <button class="button-close" type="button">Закрыть</button>
+  </section>
+    <!-- Попап "Товар добавлен в казину" конец-->
 </body>
 
 </html>
