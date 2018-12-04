@@ -33,16 +33,16 @@ a {
   color: #ffffff;
 }
 
-.main-header-top .button-checkout {
+.button-checkout {
   background-color: #63a63e;
 }
 
-.main-header-top .button-checkout:hover,
-.main-header-top .button-checkout:focus {
+.button-checkout:hover,
+.button-checkout:focus {
   background-color: #5fbb2d;
 }
 
-.main-header-top .button-checkout:active {
+.button-checkout:active {
   background-color: #518534;
 }
 
@@ -92,7 +92,7 @@ a {
   font-size: 16px;
   line-height: 18px;
   color: #32425c;
-  text-decoration: underline
+  text-decoration: underline;
 }
 
 /* .account-navigation .account-button:hover,
@@ -267,7 +267,7 @@ a {
   font-weight: bold;
   line-height: 18px;
   color: #a9a9a9;
-  text-decoration:line-through
+  text-decoration:line-through;
 }
 
 .catalog-item .price {
@@ -552,16 +552,18 @@ a {
 }
 
 /* Filters. Start */
-.container-h3-filters {
+/* .container-h3-filters {
   background-color: #f7f3ec;
-}
+} */
 
-.container-h3-filters h3 {
+.filters h3 {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   color: #000000;
   text-transform: uppercase;
+
+  background-color: #f7f3ec;
 }
 
 .filter fieldset {
