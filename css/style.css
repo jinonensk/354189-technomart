@@ -7,9 +7,18 @@ body {
   color: #ffffff;
 }
 
+/* .inner-page {
+  background-image: url("../img/technomart-index.jpg");
+  background-size: 1200px auto;
+  background-position: top center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+} */
+
 a {
   text-decoration: none;
 }
+
 
 /* Header. Start */
 .main-header {
@@ -24,13 +33,23 @@ a {
   font-size: 24px;
   line-height: 24px;
   color: #ffffff;
+  text-transform: uppercase;
 
   background-color: #ee3643;
-  border-bottom: 5px solid #b52933;
+  box-shadow: 0px 5px 0px #b52933;
+  /* border-bottom: 5px solid #b52933; */
+}
+
+.main-header-logo p {
+  margin: 0px;
 }
 
 .main-header-top a {
   color: #ffffff;
+}
+
+.button-cart-full {
+  background-color: #ee3643;
 }
 
 .button-checkout {
@@ -47,6 +66,8 @@ a {
 }
 
 .main-header h1 {
+  margin: 0;
+
   font-size: 16px;
   line-height: 21px;
   font-style: italic;
@@ -135,6 +156,8 @@ a {
 
 .main-site-navigation a {
   color: #ffffff;
+
+  border-bottom: 5px solid #293449;
 }
 
 .main-header-top a:hover,
@@ -196,6 +219,10 @@ a {
   background-color: #8ed78f;
 }
 
+.offers-block-item h3 {
+  margin: 0px;
+}
+
 .offers-block-slider .slides {
   list-style: none;
 }
@@ -206,9 +233,13 @@ a {
   line-height: 36px;
   color: #ffffff;
   text-transform: uppercase;
+
+  margin: 0px;
 }
 
 .offers-block-slider p {
+  margin: 0px;
+
   font-size: 18px;
   line-height: 24px;
   color: #ffffff;
@@ -245,7 +276,7 @@ a {
   text-transform: uppercase;
 }
 
-.catalog-list {
+.index-catalog-list {
   list-style: none;
 }
 
@@ -326,7 +357,7 @@ a {
   list-style: none;
 }
 
-.manufacturers-list a {
+.manufacturer {
   border: 1px solid #f6f6f6;
 }
 
@@ -351,6 +382,8 @@ a {
 }
 
 .services p {
+  margin: 0px;
+
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
@@ -386,6 +419,8 @@ a {
 }
 
 .about-company p {
+  margin: 0px;
+
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
@@ -410,6 +445,8 @@ a {
 }
 
 .contacts p {
+  margin: 0px;
+
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
@@ -430,9 +467,15 @@ a {
   font-size: 30px;
   line-height: 30px;
   color: #ffffff;
+  text-transform: uppercase;
 
   background-color: #ee3643;
-  border-bottom: 5px solid #b52933;
+  box-shadow: 0px 5px 0px #b52933;
+}
+
+.footer-logo p {
+  margin: 0;
+  padding: 0;
 }
 
 .site-navigation {
@@ -489,6 +532,8 @@ a {
 }
 
 .feedback-block p {
+  margin: 0px;
+
   font-size: 16px;
   line-height: 18px;
   color: #ffffff;
@@ -682,6 +727,8 @@ a {
 }
 
 .information p {
+  margin: 0px;
+
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
@@ -712,4 +759,390 @@ a {
 .item-added .container-item-added {
   background-color: #f1f1f1;
 }
-/* Catalog page popup. End */
+/* Catalog page popup. End
+
+/* --------------------------------------------------------------- */
+/* -------------------------- Для сеток -------------------------- */
+/* --------------------------------------------------------------- */
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.main-header-wrapper-top {
+  width: 100%;
+  background-color: #32425c;
+
+  /* Временно для сетки */
+  min-height: 42px;
+}
+
+.main-header-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 46px;
+
+  /* Временно для сетки */
+  min-height: 42px;
+}
+
+.main-header-wrapper-bottom {
+  width: 100%;
+  background-color: #f3f7f8;
+
+  /* Временно для сетки */
+  min-height: 278px;
+}
+
+.services-wrapper {
+  width: 100%;
+  background-color: #f3f7f8;
+
+  /* Временно для сетки */
+  min-height: 522px;
+}
+
+.footer-top-wrapper {
+  width: 100%;
+  background-color: #32425c;
+
+  /* Временно для сетки */
+  min-height: 193px;
+}
+
+.footer-bottom-wrapper {
+  width: 100%;
+  background-color: #293449;
+
+  /* Временно для сетки */
+  min-height: 107px;;
+}
+
+.user-block {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.colums {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-header h1 {
+  width: 200px;
+  min-height: 70ps;
+
+  margin-bottom: 43px;
+
+  padding: 5px;
+}
+
+.main-header-adress {
+  margin: 0px;
+}
+
+.main-header-contacts {
+  width: 300px;
+  min-height: 70ps;
+}
+
+.main-site-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
+  /* Временно для сетки */
+  min-height: 55px;
+}
+
+
+/* .main-header-wrapper,
+header,
+div {
+  background: rgba(255, 34, 75, 0.2);
+  box-shadow: 0 0 0 3px rgb(255, 45, 82);
+} */
+
+.slides {
+  margin: 0;
+  padding: 0;
+}
+
+.slides .slide {
+  width: 620px;
+  height: 266px;
+
+  margin-bottom: 53px;
+}
+
+.offers-block-item {
+  width: 300px;
+  height: 123px;
+
+  margin-bottom: 20px;
+}
+
+.colums-colums1 {
+  width: 620px;
+  height: 266px;
+}
+
+.colums-colum2 {
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 300px;
+  min-height: 266px;
+}
+
+.container-small {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 20px;
+}
+
+.container-small h2 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.index-catalog-list {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-item {
+  margin-right: 20px;
+  margin-bottom: 21px;
+  width: 218px;
+}
+
+.catalog-item img {
+  width: 218px;
+  height: 180px;
+}
+
+.index-catalog-list .catalog-item:last-child {
+  margin-right: 0;
+}
+
+.manufacturers-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  margin: 0;
+  margin-bottom: 65px;
+  padding: 0;
+}
+
+.manufacturer {
+  width: 218px;
+  height: 143px;
+
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.manufacturer:nth-child(4n) {
+  margin-right: 0;
+}
+
+.about-company {
+  width: 540px;
+  min-height: 375px;
+}
+
+.contacts {
+  width: 310px;
+  min-height: 375px;
+}
+
+.site-navigation {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
+  width: 560px;
+  min-height: 40px;
+}
+
+.footer-contacts {
+  width: 340px;
+  min-height: 50px;
+}
+
+.footer-copyright {
+  width: 230px;
+  min-height: 50px;
+}
+
+.social-list {
+  display: flex;
+  justify-content: space-between;
+
+  width: 160px;
+  min-height: 50px;
+
+  margin: 0;
+  padding: 0;
+}
+
+.feedback-block {
+  display: flex;
+  justify-content: space-between;
+
+  width: 300px;
+  min-height: 50px;
+}
+
+.services .colums {
+  justify-content: flex-start;
+}
+
+.services-slider-controls {
+  margin: 0;
+  margin-right: 80px;
+  padding: 0;
+
+  width: 240x;
+  min-height: 185px;
+}
+
+.services-slider {
+  margin: 0;
+  padding: 0;
+
+  width: 300px;
+  min-height: 185px;
+}
+
+.services-slider h3 {
+  margin: 0;
+}
+
+.services p {
+  display: block;
+  width: 405px;
+  min-height: 50px;
+
+  margin-bottom: 70px;
+}
+
+/* ----------- Каталог -------------- */
+
+.account-navigation-list {
+  margin: 0px;
+  padding: 0px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.breadcrumbs {
+  margin: 0px;
+  padding: 0px;
+
+  display: flex;
+}
+
+.filters {
+  width: 220px;
+
+  /* Временно для сетки */
+  min-height: 750px;
+}
+
+.catalog {
+  width: 700px;
+
+  /* Временно для сетки */
+  min-height: 1150px;
+}
+
+.sorting-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sorting-menu h3 {
+  margin: 0;
+  width: 140px;
+}
+
+.sort-by-type {
+  margin: 0px;
+  padding: 0px;
+  width: 380px;
+
+  display: flex;
+  justify-content: space-between;
+
+  /* Временно для сетки */
+  min-height: 38px;
+  margin-bottom: 20px;
+}
+
+.sort-by-queue {
+  margin: 0px;
+  padding: 0px;
+
+  /* width: 70px; */
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.catalog-list {
+  margin: 0px;
+  padding: 0px;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.catalog-list .catalog-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.pagination-list {
+  margin: 0px;
+  padding: 0px;
+
+  display: flex;
+
+  margin-bottom: 60px;
+}
+
+.catalog-bottom-wrapper {
+  width: 100%;
+  background-color: #f3f7f8;
+
+  /* Временно для сетки */
+  min-height: 260px;
+}
+
+.information {
+  padding-top: 60px;
+  padding-bottom: 73px;
+}
+
+.information h2 {
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+
+.information p {
+  margin-top: 0;
+}
