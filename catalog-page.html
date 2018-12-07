@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Интернет-магаин «Техномарт». Каталог перфораторов</title>
-  <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet"> -->
   <link href="css/normalize.css" rel="stylesheet">
   <!-- <link href="css/outline.css" rel="stylesheet"> -->
   <link href="css/style.css" rel="stylesheet">
@@ -12,24 +12,22 @@
 
 <body>
   <header class="main-header">
-    <div сlass="main-header-wrapper-top">
-      <div class="container">
-        <div class="main-header-top">
-          <div class="main-header-logo">
-            <p>Техномарт</p>
-          </div>
-          <form class="main-header-search">
-            <label for="search" class="visually-hidden">Поиск</label>
-            <input type="search" name="main-header-search" id="search" placeholder="Поиск">
-          </form>
-          <a class="button-bookmarks-empty" href="#">Закладки: 0</a>
-          <a class="button-cart-full" href="#">Корзина: 10</a>
-          <a class="button-checkout" href="#">Оформить заказ</a>
+    <div class="main-header-wrapper-top">
+      <div class="main-header-top container">
+        <div class="main-header-logo">
+          <a href="index.html">Техномарт</a>
         </div>
+        <form class="main-header-search">
+          <label for="search" class="visually-hidden">Поиск</label>
+          <input type="search" name="main-header-search" id="search" placeholder="Поиск">
+        </form>
+        <a class="button-bookmarks-empty" href="#">Закладки: 0</a>
+        <a class="button-cart-full" href="#">Корзина: 10</a>
+        <a class="button-checkout" href="#">Оформить заказ</a>
       </div>
-    </div>
+  </div>
     <div class="container">
-      <div class="colums">
+      <div class="columns">
 
         <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
         <div class="main-header-contacts">
@@ -75,7 +73,7 @@
         <h2>Перфораторы</h2>
       </div>
 
-      <div class="colums">
+      <div class="columns">
         <section class="filters">
           <!-- <div class="container-h3-filters"> -->
             <h3>Фильтр</h3>
@@ -131,40 +129,46 @@
         </section>
 
         <div class="catalog">
-          <section class="sorting-section colums">
+          <section class="sorting-section columns">
             <h3>Сортировка</h3>
-            <nav class="sorting-menu">
-              <ul class="sort-by-type">
-                <li>
-                  <a class="sorting-link sorting-link-price sorting-link-active" href="catalog-page.html">По цене</a>
-                </li>
-                <li>
-                  <a class="sorting-link sorting-link-type" href="catalog-page.html">По типу</a>
-                </li>
-                <li>
-                  <a class="sorting-link sorting-link-functional" href="catalog-page.html">По функционалу</a>
-                </li>
-              </ul>
-              <ul class="sort-by-queue">
-                <li>
-                  <a class="sorting-arrow-up sorting-arrow-active" href="catalog-page.html">По возрастарнию</a>
-                </li>
-                <li>
-                  <a class="sorting-arrow-down" href="catalog-page.html">По убыванию</a>
-                </li>
-              </ul>
-            </nav>
+            <ul class="sort-by-type">
+              <li>
+                <a class="sorting-link sorting-link-price sorting-link-active" href="catalog-page.html">По цене</a>
+              </li>
+              <li>
+                <a class="sorting-link sorting-link-type" href="catalog-page.html">По типу</a>
+              </li>
+              <li>
+                <a class="sorting-link sorting-link-functional" href="catalog-page.html">По функционалу</a>
+              </li>
+            </ul>
+            <ul class="sort-by-queue">
+              <li>
+                <a class="sorting-arrow-up sorting-arrow-active" href="catalog-page.html">По возрастарнию</a>
+              </li>
+              <li>
+                <a class="sorting-arrow-down" href="catalog-page.html">По убыванию</a>
+              </li>
+            </ul>
           </section>
 
-          <section>
+          <section class="catalog-list">
             <h3 class="visually-hidden">Список товаров</h3>
-            <ul class="catalog-list">
+            <ul class="catalog-items">
               <li class="catalog-item">
                 <p class="catalog-item-image">
                   <a href="#">
                     <img src="img/bosch-3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
                   </a>
                 </p>
+                <ul class="actions">
+                  <li>
+                    <a href="#" class="button button-buy-item">Купить</a>
+                  </li>
+                  <li>
+                    <a href="#" class="button button-add-to-bookmarks">В закладки</a>
+                  </li>
+                </ul>
                 <h3>
                   <a class="catalog-item-name" href="#">Перфоратор BOSCH BFG 3000</a>
                 </h3>
@@ -179,6 +183,14 @@
                     <img src="img/bosch-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
                   </a>
                 </p>
+                <ul class="actions">
+                  <li>
+                    <a href="#" class="button button-buy-item">Купить</a>
+                  </li>
+                  <li>
+                    <a href="#" class="button button-add-to-bookmarks">В закладки</a>
+                  </li>
+                </ul>
                 <h3>
                   <a class="catalog-item-name" href="#">Перфоратор BOSCH BFG 6000</a>
                 </h3>
@@ -188,7 +200,12 @@
                 </p>
               </li>
               <li class="catalog-item">
-                <ul>
+                <p class="catalog-item-image">
+                  <a href="#">
+                    <img src="img/bosch-2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
+                  </a>
+                </p>
+                <ul class="actions">
                   <li>
                     <a href="#" class="button button-buy-item">Купить</a>
                   </li>
@@ -210,6 +227,14 @@
                     <img src="img/bosch-3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
                   </a>
                 </p>
+                <ul class="actions">
+                  <li>
+                    <a href="#" class="button button-buy-item">Купить</a>
+                  </li>
+                  <li>
+                    <a href="#" class="button button-add-to-bookmarks">В закладки</a>
+                  </li>
+                </ul>
                 <h3>
                   <a class="catalog-item-name" href="#">Перфоратор BOSCH BFG 3000</a>
                 </h3>
@@ -224,6 +249,14 @@
                     <img src="img/bosch-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
                   </a>
                 </p>
+                <ul class="actions">
+                  <li>
+                    <a href="#" class="button button-buy-item">Купить</a>
+                  </li>
+                  <li>
+                    <a href="#" class="button button-add-to-bookmarks">В закладки</a>
+                  </li>
+                </ul>
                 <h3>
                   <a class="catalog-item-name" href="#">Перфоратор BOSCH BFG 6000</a>
                 </h3>
@@ -238,6 +271,14 @@
                     <img src="img/bosch-2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
                   </a>
                 </p>
+                <ul class="actions">
+                  <li>
+                    <a href="#" class="button button-buy-item">Купить</a>
+                  </li>
+                  <li>
+                    <a href="#" class="button button-add-to-bookmarks">В закладки</a>
+                  </li>
+                </ul>
                 <h3>
                   <a class="catalog-item-name" href="#">Перфоратор BOSCH BFG 2000</a>
                 </h3>
@@ -252,6 +293,14 @@
                     <img src="img/bosch-3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
                   </a>
                 </p>
+                <ul class="actions">
+                  <li>
+                    <a href="#" class="button button-buy-item">Купить</a>
+                  </li>
+                  <li>
+                    <a href="#" class="button button-add-to-bookmarks">В закладки</a>
+                  </li>
+                </ul>
                 <h3>
                   <a class="catalog-item-name" href="#">Перфоратор BOSCH BFG 3000</a>
                 </h3>
@@ -266,6 +315,14 @@
                     <img src="img/bosch-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
                   </a>
                 </p>
+                <ul class="actions">
+                  <li>
+                    <a href="#" class="button button-buy-item">Купить</a>
+                  </li>
+                  <li>
+                    <a href="#" class="button button-add-to-bookmarks">В закладки</a>
+                  </li>
+                </ul>
                 <h3>
                   <a class="catalog-item-name" href="#">Перфоратор BOSCH BFG 6000</a>
                 </h3>
@@ -280,6 +337,14 @@
                     <img src="img/bosch-2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
                   </a>
                 </p>
+                <ul class="actions">
+                  <li>
+                    <a href="#" class="button button-buy-item">Купить</a>
+                  </li>
+                  <li>
+                    <a href="#" class="button button-add-to-bookmarks">В закладки</a>
+                  </li>
+                </ul>
                 <h3>
                   <a class="catalog-item-name" href="#">Перфоратор BOSCH BFG 2000</a>
                 </h3>
@@ -308,76 +373,70 @@
       </div>
     </div>
     <div class="catalog-bottom-wrapper">
-      <div class="container">
-        <section class="information">
-          <h2>Пара слов о перфраторах</h2>
-          <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в
-            кирпиче, бетоне и камне.<br>
-            Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели,
-            шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут
-            совмещены отбойный молоток и ударная дрель.</p>
-        </section>
-      </div>
+      <section class="container information">
+        <h2>Пара слов о перфраторах</h2>
+        <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в
+          кирпиче, бетоне и камне.<br>
+          Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели,
+          шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут
+          совмещены отбойный молоток и ударная дрель.</p>
+      </section>
     </div>
   </main>
 
   <footer>
     <div class="footer-top-wrapper">
-      <div class="container">
-        <div class="footer-top">
-          <div class="colums">
-            <div class="footer-logo">
-              <p>Техномарт</p>
-            </div>
-            <nav class="footer-navigation-top" aria-label="Содержимое">
-              <ul class="site-navigation">
-                <li><a href="#">Компания</a></li>
-                <li><a href="#">Новости</a></li>
-                <li><a href="catalog-page.html">Каталог</a></li>
-                <li><a href="#">Доставка</a></li>
-                <li><a href="#">Контакты</a></li>
-              </ul>
-            </nav>
+      <div class="container footer-top">
+        <div class="columns">
+          <div class="footer-logo">
+            <a href="index.html">Техномарт</a>
           </div>
-          <div class="colums">
-            <p class="footer-contacts">
-              г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
-              +7 (812) 555-05-55
-            </p>
-            <nav class="footer-navigation-bottom" aria-label="Разделы">
-              <ul class="site-navigation">
-                <li><a href="#">Материалы</a></li>
-                <li><a href="#">Техника</a></li>
-                <li><a href="#">Инструменты</a></li>
-                <li><a href="#">Спецпредложения</a></li>
-              </ul>
-            </nav>
-          </div>
+          <nav class="footer-navigation-top" aria-label="Содержимое">
+            <ul class="site-navigation">
+              <li><a href="#">Компания</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="catalog-page.html">Каталог</a></li>
+              <li><a href="#">Доставка</a></li>
+              <li><a href="#">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="columns">
+          <p class="footer-contacts">
+            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+            +7 (812) 555-05-55
+          </p>
+          <nav class="footer-navigation-bottom" aria-label="Разделы">
+            <ul class="site-navigation">
+              <li><a href="#">Материалы</a></li>
+              <li><a href="#">Техника</a></li>
+              <li><a href="#">Инструменты</a></li>
+              <li><a href="#">Спецпредложения</a></li>
+            </ul>
+          </nav>
         </div>
       </div>
     </div>
     <div class="footer-bottom-wrapper">
-      <div class="container">
-        <div class="footer-bottom colums">
-          <p class="footer-copyright">
-            © 2010–2017 Компания «Техномарт»
-            Все права защищены
+      <div class="container footer-bottom columns">
+        <p class="footer-copyright">
+          © 2010–2017 Компания «Техномарт»
+          Все права защищены
+        </p>
+        <ul class="social-list" aria-label="Мы в социальных сетях">
+          <li><a class="social-button-vk" href="#" aria-label="Вконтакте">1</a></li>
+          <li><a class="social-button-fb" href="#" aria-label="Фейсбук">2</a></li>
+          <li><a class="social-button-tw" href="#" aria-label="Инстаграм">3</a></li>
+        </ul>
+        <div class="feedback-block">
+          <p class="feedback-block-item">
+            Обратная связь:
+            <a class="button" href="#">mail@htmlacademy.ru</a>
           </p>
-          <ul class="social-list" aria-label="Мы в социальных сетях">
-            <li><a class="social-button-vk" href="#" aria-label="Вконтакте">1</a></li>
-            <li><a class="social-button-fb" href="#" aria-label="Фейсбук">2</a></li>
-            <li><a class="social-button-tw" href="#" aria-label="Инстаграм">3</a></li>
-          </ul>
-          <div class="feedback-block">
-            <p class="feedback-block-item">
-              Обратная связь:
-              <a class="button" href="#">mail@htmlacademy.ru</a>
-            </p>
-            <p class="feedback-block-item">
-              Разработано —
-              <a class="button" href="https://htmlacademy.ru">htmlacademy.ru</a>
-            </p>
-          </div>
+          <p class="feedback-block-item">
+            Разработано —
+            <a class="button" href="https://htmlacademy.ru">htmlacademy.ru</a>
+          </p>
         </div>
       </div>
     </div>
