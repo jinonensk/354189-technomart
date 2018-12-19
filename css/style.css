@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: 'Cuprum';
   font-style: normal;
   font-weight: 400;
@@ -32,13 +32,13 @@
   src: local('Cuprum Bold Italic'),
        url(../fonts/cuprumbolditalic.woff) format('woff'),
        url(../fonts/cuprumbolditalic.woff2) format('woff2');
-}
+} */
 
 @font-face {
   font-family: 'PT Sans';
   font-style: normal;
   font-weight: 400;
-  src: local('Cuprum Bold Italic'),
+  src: local('PT Sans Italic'),
        url(../fonts/ptsans.woff) format('woff'),
        url(../fonts/ptsans.woff2) format('woff2');
 }
@@ -1125,7 +1125,7 @@ input[type="radio"].visually-hidden {
 
   font-size:14px;
   font-weight:normal;
-  font-family:"Cuprum", sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   line-height:18px;
   text-decoration:none;
   text-transform:uppercase;
@@ -1541,9 +1541,16 @@ input[type="radio"].visually-hidden {
   width: 100%;
 }
 
-.contacts img {
+.popup-map-anchor {
+  position: relative;
+
   margin-bottom: 36px;
 }
+
+.popup-map-anchor a {
+  display: block;
+}
+
 /* About company. End */
 
 /* Footer. Start */
@@ -1754,6 +1761,82 @@ input[type="radio"].visually-hidden {
 }
 /* Footer. End */
 
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px);
+  }
+
+  70% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+
+  90% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(-2000px);
+            transform: translateY(-2000px);
+  }
+
+  70% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+
+  90% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes shake {
+  0%,  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  10%,  30%,  50%,  70%,  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+
+  20%,  40%,  60%,  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+@keyframes shake {
+  0%,  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  10%,  30%,  50%,  70%,  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+
+  20%,  40%,  60%,  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
 /* Index popup. Start */
 .popup-letter {
   position: fixed;
@@ -1904,13 +1987,9 @@ input[type="radio"].visually-hidden {
 /* Index popup. End */
 
 /* Index map. Start */
-.popup-map-anchor {
-  position: relative;
-}
-
 .popup-map {
   position: absolute;
-  bottom: -80px;
+  bottom: -118px;
   right: -15px;
   z-index: 25;
 
@@ -1919,10 +1998,27 @@ input[type="radio"].visually-hidden {
   height: 476px;
 }
 
+.popup-map iframe {
+  position: relative;
+  top: 15px;
+  left: 15px;
+  z-index: 2;
+
+  border: none;
+}
+
+.popup-map img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
 .popup-map .button-close {
   position: absolute;
   top: 25px;
   right: 25px;
+  z-index: 3;
 
   font-size: 0;
 
@@ -2024,6 +2120,15 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
 }
 
+.popup-button-continue:focus,
+.popup-button-continue:hover {
+  opacity: 0.8;
+}
+
+.popup-button-continue:active {
+  opacity: 0.6;
+}
+
 .button-close {
   position: absolute;
   top: 10px;
@@ -2066,6 +2171,18 @@ input[type="radio"].visually-hidden {
 }
 /* add item. End */
 
+.popup-show {
+  display: block;
+
+  animation: bounce 0.6s;
+}
+
+.popup-letter-error {
+  animation: shake 0.6s;
+}
+
+
+/* catalog */
 .catalog {
   width: 700px;
 }

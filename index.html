@@ -26,14 +26,14 @@
 
           </button>
         </form>
-        <a class="button-bookmarks button-bookmarks-empty" href="#">Закладки: 0
+        <a class="button-bookmarks" href="#">Закладки: <span class="quantity">0</span>
 
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16">
             <path d="M14 15c0 .55-.368.741-.818.426l-5.363-3.765c-.45-.315-1.187-.315-1.637 0L.818 15.426C.368 15.741 0 15.55 0 15V1c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v14z"/>
           </svg>
 
         </a>
-        <a class="button-cart button-cart-empty" href="#">Корзина: 0
+        <a class="button-cart" href="#">Корзина: <span class="quantity">0</span>
 
           <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
             <circle cx="4.5" cy="13.5" r="1.5"/>
@@ -127,7 +127,7 @@
                   <figure class="offers-slider-content">
                     <img src="img/slide-drills.jpg" width="620" height="266" alt="Дрели">
                   </figure>
-                  <a class="button button-red offers-slider-button" href="#">Открыть каталог</a>
+                  <a class="button button-red offers-slider-button" href="catalog-page.html">Открыть каталог</a>
                 </li>
                 <li class="slide slide-perforators">
                   <h3>Перфораторы</h3>
@@ -172,7 +172,7 @@
             </p>
             <ul class="actions">
               <li>
-                <a href="#" class="button button-buy-item">Купить
+                <a href="cart.html" class="button button-buy-item">Купить
 
                   <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
                     <circle cx="4.5" cy="13.5" r="1.5"/>
@@ -194,6 +194,7 @@
               <span class="price">25500 Р.</span>
             </p>
           </li>
+
           <li class="catalog-item">
             <div class="flag"></div>
             <p class="catalog-item-image">
@@ -203,7 +204,7 @@
             </p>
             <ul class="actions">
               <li>
-                <a href="#" class="button button-buy-item">Купить
+                <a href="cart.html" class="button button-buy-item">Купить
 
                   <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
                     <circle cx="4.5" cy="13.5" r="1.5"/>
@@ -234,7 +235,7 @@
             </p>
             <ul class="actions">
               <li>
-                <a href="#" class="button button-buy-item">Купить
+                <a href="cart.html" class="button button-buy-item">Купить
 
                   <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
                     <circle cx="4.5" cy="13.5" r="1.5"/>
@@ -265,7 +266,7 @@
             </p>
             <ul class="actions">
               <li>
-                <a href="#" class="button button-buy-item">Купить
+                <a href="cart.html" class="button button-buy-item">Купить
 
                   <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
                     <circle cx="4.5" cy="13.5" r="1.5"/>
@@ -409,17 +410,22 @@
         <h3>Контакты</h3>
         <p>Вы можете забрать товар сами, заехав в наш офис:</p>
         <div class="popup-map-anchor">
-          <a href="#">
-            <img src="img/map-small.jpg" width="300" height="158" alt="map">
+          <a class="contacts-button-map" href="map.html">
+            <img src="img/map-small.jpg" width="300" height="158" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
           </a>
-          <!-- popup "Map" start -->
+          <!-- popup "Map". Start -->
           <div class="popup-map">
-            <img src="img/map.png" width="970" height="476" alt="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30
+            .322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13
+            .1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul
+            .%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426"
+            width="940" height="450" allowfullscreen></iframe>
+            <img src="img/map.png" width="970" height="476" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
             <button class="button-close" type="button">Закрыть</button>
           </div>
-          <!-- popup "Map" end -->
+          <!-- popup "Map". End -->
         </div>
-        <a class="button button-red" href="#">Заблудились? Напишите нам</a>
+        <a class="button button-red" href="feedback-form.html">Заблудились? Напишите нам</a>
       </section>
     </div>
   </main>
@@ -484,7 +490,7 @@
 
   <!-- popup "fedback form" start-->
   <section class="popup-letter">
-    <form class="popup-letter-form" id="letter-form">
+    <form class="popup-letter-form" method="get" action="https://echo.htmlacademy.ru" id="letter-form">
       <h1 class="visually-hidden">Форма отрпавки письма</h1>
       <ul class="columns form-list">
         <li>
@@ -513,11 +519,13 @@
     <h1>Товар добавлен в корзину!</h1>
     <div class="popup-bottom-container">
       <a class="button button-red popup-button-checkout" href="#">Оформить заказ</a>
-      <a class="button popup-button-continue" href="catalog-page.html">Продолжить покупки</a>
+      <a class="button popup-button-continue" href="index.html">Продолжить покупки</a>
     </div>
       <button class="button-close" type="button">Закрыть</button>
   </section>
   <!-- popup "add item" end-->
+
+  <script src="js/javascript.js"></script>
 </body>
 
 </html>
