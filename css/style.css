@@ -1,4 +1,4 @@
-/* @font-face {
+@font-face {
   font-family: 'Cuprum';
   font-style: normal;
   font-weight: 400;
@@ -32,7 +32,7 @@
   src: local('Cuprum Bold Italic'),
        url(../fonts/cuprumbolditalic.woff) format('woff'),
        url(../fonts/cuprumbolditalic.woff2) format('woff2');
-} */
+}
 
 @font-face {
   font-family: 'PT Sans';
@@ -231,20 +231,15 @@ input[type="radio"].visually-hidden {
 .main-header-search input[type="search"]:-ms-input-placeholder {
   color: white;
 }
-.main-header-search input[type="search"]::-ms-input-placeholder {
-  color: white;
-}
 .main-header-search input[type="search"]::placeholder {
   color: white;
+  opacity: 1;
 }
 
 .main-header-search input[type="search"]:focus::-webkit-input-placeholder {
   color: transparent;
 }
 .main-header-search input[type="search"]:focus::-moz-placeholder {
-  color: transparent;
-}
-.main-header-search input[type="search"]:focus:-moz-placeholder {
   color: transparent;
 }
 .main-header-search input[type="search"]:focus:-ms-input-placeholder {
@@ -1389,14 +1384,21 @@ input[type="radio"].visually-hidden {
   width: 280px;
 }
 
-#slide-delivery:focus ~ .services-slider-controls .services-button-delivery,
+#slide-delivery:focus ~ .services-slider-controls,
+#slide-guarantee:focus ~ .services-slider-controls,
+#slide-credit:focus ~ .services-slider-controls {
+box-shadow: 0px 0px 2px blue;
+  outline-style: none;
+}
+
+/* #slide-delivery:focus ~ .services-slider-controls .services-button-delivery, */
 #slide-delivery:checked ~ .services-slider-controls .services-button-delivery {
   color: #32425c;
 
   background-color: #ffffff;
 }
 
-#slide-guarantee:focus ~ .services-slider-controls .services-button-guarantee,
+/* #slide-guarantee:focus ~ .services-slider-controls .services-button-guarantee, */
 #slide-guarantee:checked ~ .services-slider-controls .services-button-guarantee {
   color: #32425c;
 
@@ -1616,6 +1618,11 @@ input[type="radio"].visually-hidden {
   font-size: 18px;
   line-height: 24px;
   color: #ffffff;
+}
+
+.footer-phone {
+  text-decoration: none;
+  color: white;
 }
 
 .footer-navigation-bottom .site-navigation {
@@ -2806,3 +2813,6 @@ input[type="radio"].visually-hidden {
   color: #000000;
 }
 /* Information block. End */
+
+
+

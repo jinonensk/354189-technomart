@@ -1,12 +1,12 @@
-const buyItemButton = document.querySelectorAll('.button-buy-item');
+const buyItemButton = [].slice.call(document.querySelectorAll('.button-buy-item'),0);
 const itemAddedPopup = document.querySelector('.popup-item-added');
 
 const addedPopupClose = itemAddedPopup.querySelector('.button-close');
 const continueShopping = itemAddedPopup.querySelector('.popup-button-continue');
 
 // buy item
-buyItemButton.forEach(item => {
-  item.addEventListener('click', evt => {
+buyItemButton.forEach(function(item) {
+  item.addEventListener('click', function(evt) {
     let itemsInCart = document.querySelector('.button-cart .quantity');
     let itemInCartBtn = document.querySelector('.button-cart');
     let newQuantity = Number(itemsInCart.textContent) + 1;
@@ -21,17 +21,17 @@ buyItemButton.forEach(item => {
   })
 });
 
-addedPopupClose.addEventListener('click', evt => {
+addedPopupClose.addEventListener('click', function(evt) {
   evt.preventDefault();
   itemAddedPopup.classList.remove('popup-show');
 });
 
-continueShopping.addEventListener('click', evt => {
+continueShopping.addEventListener('click', function(evt) {
   evt.preventDefault();
   itemAddedPopup.classList.remove('popup-show');
 });
 
-window.addEventListener('keydown', evt => {
+window.addEventListener('keydown', function(evt) {
   if (itemAddedPopup.classList.contains('popup-show')) {
 
     if (evt.keyCode === 27) {
@@ -47,17 +47,17 @@ if (document.querySelector('.contacts-button-map')) {
   const popupMap = document.querySelector('.popup-map');
   const closeMap = popupMap.querySelector('.button-close');
 
-  invokeMap.addEventListener('click', evt => {
+  invokeMap.addEventListener('click', function(evt) {
     evt.preventDefault();
     popupMap.classList.add('popup-show');
   })
 
-  closeMap.addEventListener('click', evt => {
+  closeMap.addEventListener('click', function(evt) {
     evt.preventDefault();
     popupMap.classList.remove('popup-show');
   })
 
-  window.addEventListener('keydown', evt => {
+  window.addEventListener('keydown', function(evt) {
     if (popupMap.classList.contains('popup-show')) {
 
       if (evt.keyCode === 27) {
@@ -89,7 +89,7 @@ if (document.querySelector('.contacts .button')) {
     isStorageSupport = false;
   }
 
-  invokeLetter.addEventListener('click', evt => {
+  invokeLetter.addEventListener('click', function(evt) {
     evt.preventDefault();
     letterPopup.classList.add('popup-show');
     userName.focus();
@@ -103,13 +103,13 @@ if (document.querySelector('.contacts .button')) {
     };
   });
 
-  letterClose.addEventListener('click', evt => {
+  letterClose.addEventListener('click', function(evt) {
     evt.preventDefault();
     letterPopup.classList.remove('popup-show');
     letterPopup.classList.remove("popup-letter-error");
   });
 
-  letterForm.addEventListener('submit', evt => {
+  letterForm.addEventListener('submit', function(evt) {
 
     if (!userName.value || !userEmail.value || !letterMessage.value) {
       evt.preventDefault();
@@ -125,7 +125,7 @@ if (document.querySelector('.contacts .button')) {
     };
   });
 
-  window.addEventListener('keydown', evt => {
+  window.addEventListener('keydown', function(evt) {
     if (letterPopup.classList.contains('popup-show')) {
 
       if (evt.keyCode === 27) {
@@ -138,21 +138,27 @@ if (document.querySelector('.contacts .button')) {
 };
 
 // index slider
-if (document.querySelectorAll('.slider-button')) {
-  const sliderControls = document.querySelectorAll('.slider-button');
-  const sliderInputs = document.querySelectorAll('[name=toggle]');
+if (document.querySelector('.slider-button')) {
+  const sliderControls = [].slice.call(document.querySelectorAll('.slider-button'),0);
+  const sliderInputs = [].slice.call(document.querySelectorAll('[name=toggle]'),0);
 
-  sliderControls.forEach(item => {
-    item.addEventListener('click', evt => {
+  sliderControls.forEach(function(item) {
+    item.addEventListener('click', function(evt) {
       evt.preventDefault();
 
-      if (sliderInputs[0].checked === true) {
-        sliderInputs[0].checked = false;
-        sliderInputs[1].checked = true;
+      let checkedIndex = sliderInputs.findIndex(function(el) {
+        return el.checked
+      });
+
+      if (checkedIndex < sliderInputs.length-1) {
+        sliderInputs[checkedIndex + 1].checked = true;
       } else {
-        sliderInputs[0].checked = true;
-        sliderInputs[1].checked = false;
+        sliderInputs[0].checked = true
       };
+
+      //sliderInputs[0].checked === true;
+      //? sliderInputs[1].checked = true;
+      //: sliderInputs[0].checked = true;
     })
   });
 };
