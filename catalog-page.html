@@ -27,7 +27,7 @@
           </button>
         </form>
         <a class="button-bookmarks" href="#">Закладки: <span class="quantity">0</span></a>
-        <a class="button-cart button-cart-full" href="#">Корзина: <span class="quantity">10</span></a>
+        <a class="button-cart button-full" href="#">Корзина: <span class="quantity">10</span></a>
         <a class="button-checkout" href="#">Оформить заказ</a>
       </div>
   </div>
@@ -39,8 +39,17 @@
           <p class="main-header-adress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
         </div>
         <nav class="account-navigation" aria-label="Меню пользователя">
-          <a class="button account-button" href="#">Равшан Джамшутович
-
+<ul class="account-buttons-list">
+  <li>
+          <a class="button account-button" href="https://htmlacademy.ru/profile/jinonensk">Равшан  Джамшутович
+            <!-- person -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18">
+              <path d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"/>
+            </svg>
+          </a>
+          </li>
+          <li>
+          <a href="https://htmlacademy.ru/logout?redirect_url=https://htmlacademy.ru/profile/jinonensk" class="logout">
             <!-- logout -->
             <svg xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17">
               <g>
@@ -48,13 +57,9 @@
                 <path d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z"/>
               </g>
             </svg>
-
-            <!-- person -->
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18">
-              <path d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z"/>
-            </svg>
-
           </a>
+        </li>
+        </ul>
           <ul class="account-navigation-list">
             <li>
               <a class="button-my-orders" href="#">Мои заказы</a>
@@ -201,12 +206,7 @@
             <ul class="catalog-items">
               <li class="catalog-item">
                 <div class="flag">новинка</div>
-                <p class="catalog-item-image">
-                  <a href="#">
-                    <img src="img/bosch-3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
-                  </a>
-                </p>
-                <ul class="actions">
+                <ul class="actions" tabindex="0">
                   <li>
                     <a href="cart.html" class="button button-buy-item">Купить</a>
                   </li>
@@ -214,6 +214,9 @@
                     <a href="#" class="button button-add-to-bookmarks">В закладки</a>
                   </li>
                 </ul>
+                <p class="catalog-item-image">
+                  <img src="img/bosch-3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+                </p>
                 <h3>
                   <a class="catalog-item-name" href="#">Перфоратор BOSCH BFG 3000</a>
                 </h3>
@@ -224,12 +227,7 @@
               </li>
               <li class="catalog-item">
                 <div class="flag">новинка</div>
-                <p class="catalog-item-image">
-                  <a href="#">
-                    <img src="img/bosch-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
-                  </a>
-                </p>
-                <ul class="actions">
+                <ul class="actions" tabindex="0">
                   <li>
                     <a href="cart.html" class="button button-buy-item">Купить</a>
                   </li>
@@ -237,6 +235,9 @@
                     <a href="#" class="button button-add-to-bookmarks">В закладки</a>
                   </li>
                 </ul>
+                <p class="catalog-item-image">
+                  <img src="img/bosch-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+                </p>
                 <h3>
                   <a class="catalog-item-name" href="#">Перфоратор BOSCH BFG 6000</a>
                 </h3>
@@ -247,12 +248,7 @@
               </li>
               <li class="catalog-item">
                 <div class="flag flag-new">новинка</div>
-                <p class="catalog-item-image">
-                  <a href="#">
-                    <img src="img/bosch-2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
-                  </a>
-                </p>
-                <ul class="actions">
+                <ul class="actions" tabindex="0">
                   <li>
                     <a href="cart.html" class="button button-buy-item">Купить</a>
                   </li>
@@ -260,6 +256,9 @@
                     <a href="#" class="button button-add-to-bookmarks">В закладки</a>
                   </li>
                 </ul>
+                <p class="catalog-item-image">
+                  <img src="img/bosch-2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
+                </p>
                 <h3>
                   <a class="catalog-item-name" href="#">Перфоратор BOSCH BFG 2000</a>
                 </h3>
@@ -270,12 +269,7 @@
               </li>
               <li class="catalog-item">
                 <div class="flag">новинка</div>
-                <p class="catalog-item-image">
-                  <a href="#">
-                    <img src="img/bosch-3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
-                  </a>
-                </p>
-                <ul class="actions">
+                <ul class="actions" tabindex="0">
                   <li>
                     <a href="cart.html" class="button button-buy-item">Купить</a>
                   </li>
@@ -283,6 +277,9 @@
                     <a href="#" class="button button-add-to-bookmarks">В закладки</a>
                   </li>
                 </ul>
+                <p class="catalog-item-image">
+                  <img src="img/bosch-3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+                </p>
                 <h3>
                   <a class="catalog-item-name" href="#">Перфоратор BOSCH BFG 3000</a>
                 </h3>
@@ -293,12 +290,7 @@
               </li>
               <li class="catalog-item">
                 <div class="flag flag-new">новинка</div>
-                <p class="catalog-item-image catalog-item-image-new">
-                  <a href="#">
-                    <img src="img/bosch-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
-                  </a>
-                </p>
-                <ul class="actions">
+                <ul class="actions" tabindex="0">
                   <li>
                     <a href="cart.html" class="button button-buy-item">Купить</a>
                   </li>
@@ -306,6 +298,9 @@
                     <a href="#" class="button button-add-to-bookmarks">В закладки</a>
                   </li>
                 </ul>
+                <p class="catalog-item-image catalog-item-image-new">
+                  <img src="img/bosch-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+                </p>
                 <h3>
                   <a class="catalog-item-name" href="#">Перфоратор BOSCH BFG 6000</a>
                 </h3>
@@ -316,12 +311,7 @@
               </li>
               <li class="catalog-item">
                 <div class="flag">новинка</div>
-                <p class="catalog-item-image">
-                  <a href="#">
-                    <img src="img/bosch-2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
-                  </a>
-                </p>
-                <ul class="actions">
+                <ul class="actions" tabindex="0">
                   <li>
                     <a href="cart.html" class="button button-buy-item">Купить</a>
                   </li>
@@ -329,6 +319,9 @@
                     <a href="#" class="button button-add-to-bookmarks">В закладки</a>
                   </li>
                 </ul>
+                <p class="catalog-item-image">
+                  <img src="img/bosch-2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
+                </p>
                 <h3>
                   <a class="catalog-item-name" href="#">Перфоратор BOSCH BFG 2000</a>
                 </h3>
@@ -339,12 +332,7 @@
               </li>
               <li class="catalog-item">
                 <div class="flag flag-new">новинка</div>
-                <p class="catalog-item-image catalog-item-image-new">
-                  <a href="#">
-                    <img src="img/bosch-3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
-                  </a>
-                </p>
-                <ul class="actions">
+                <ul class="actions" tabindex="0">
                   <li>
                     <a href="cart.html" class="button button-buy-item">Купить</a>
                   </li>
@@ -352,6 +340,9 @@
                     <a href="#" class="button button-add-to-bookmarks">В закладки</a>
                   </li>
                 </ul>
+                <p class="catalog-item-image catalog-item-image-new">
+                  <img src="img/bosch-3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
+                </p>
                 <h3>
                   <a class="catalog-item-name" href="#">Перфоратор BOSCH BFG 3000</a>
                 </h3>
@@ -362,12 +353,7 @@
               </li>
               <li class="catalog-item">
                 <div class="flag">новинка</div>
-                <p class="catalog-item-image">
-                  <a href="#">
-                    <img src="img/bosch-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
-                  </a>
-                </p>
-                <ul class="actions">
+                <ul class="actions" tabindex="0">
                   <li>
                     <a href="cart.html" class="button button-buy-item">Купить</a>
                   </li>
@@ -375,6 +361,9 @@
                     <a href="#" class="button button-add-to-bookmarks">В закладки</a>
                   </li>
                 </ul>
+                <p class="catalog-item-image">
+                  <img src="img/bosch-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 6000">
+                </p>
                 <h3>
                   <a class="catalog-item-name" href="#">Перфоратор BOSCH BFG 6000</a>
                 </h3>
@@ -385,12 +374,7 @@
               </li>
               <li class="catalog-item">
                 <div class="flag">новинка</div>
-                <p class="catalog-item-image">
-                  <a href="#">
-                    <img src="img/bosch-2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
-                  </a>
-                </p>
-                <ul class="actions">
+                <ul class="actions" tabindex="0">
                   <li>
                     <a href="cart.html" class="button button-buy-item">Купить</a>
                   </li>
@@ -398,6 +382,9 @@
                     <a href="#" class="button button-add-to-bookmarks">В закладки</a>
                   </li>
                 </ul>
+                <p class="catalog-item-image">
+                  <img src="img/bosch-2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
+                </p>
                 <h3>
                   <a class="catalog-item-name" href="#">Перфоратор BOSCH BFG 2000</a>
                 </h3>

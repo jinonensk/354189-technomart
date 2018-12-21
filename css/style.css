@@ -368,16 +368,16 @@ input[type="radio"].visually-hidden {
  opacity: 0.6;
 }
 
-.button-cart-full {
+.button-full {
   background-color: #ee3643;
 }
 
-.main-header-top .button-cart-full:hover,
-.main-header-top .button-cart-full:focus {
+.main-header-top .button-full:hover,
+.main-header-top .button-full:focus {
   background-color: #ee3643;
 }
 
-.main-header-top .button-cart-full:active {
+.main-header-top .button-full:active {
   background-color: #ba2732
 }
 
@@ -535,18 +535,39 @@ input[type="radio"].visually-hidden {
   color: rgba(50, 66, 92, 0.3);
 }
 
+.account-buttons-list {
+  position: relative;
+
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.account-buttons-list li:first-child{
+  width: 265px;
+}
+
+.account-buttons-list li:last-child{
+  width: 35px;
+  padding-bottom: 7px;
+}
+
 .account-button {
   position: relative;
 
   display: inline-block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 300px;
+  width: 100%;
   min-height: 46px;
   margin: 0px;
   margin-bottom: 7px;
   padding: 12px 46px;
-
+  padding-right: 11px;
 
   font-size: 21px;
   line-height: 21px;
@@ -558,7 +579,7 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
 }
 
-.account-button svg {
+.account-buttons-list svg {
   position: absolute;
   top: 14px;
   left: 269px;
@@ -582,6 +603,23 @@ input[type="radio"].visually-hidden {
 }
 
 .account-button:active svg {
+  fill: #d8d8d8;
+}
+
+.logout {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+
+  background-color: #ffffff;
+}
+
+.logout:focus svg,
+.logout:hover svg {
+  fill: #32425c;
+}
+
+.logout:active svg {
   fill: #d8d8d8;
 }
 
@@ -1103,7 +1141,7 @@ input[type="radio"].visually-hidden {
 }
 
 .actions {
-  display: none;
+  opacity: 0;
 }
 
 .catalog-item:hover,
@@ -1112,8 +1150,13 @@ input[type="radio"].visually-hidden {
           box-shadow: 10px 10px 25px rgba(41, 52, 73, 0.3);
 }
 
+.catalog-item:focus .actions,
 .catalog-item:hover .actions {
-  display: block;
+  opacity: 1;
+}
+
+.actions:focus-within {
+  opacity: 1;
 }
 
 .button-buy-item,
@@ -1722,7 +1765,7 @@ input[type="radio"].visually-hidden {
   background-image: url(../img/icon-vk.svg);
   background-repeat: no-repeat;
   background-size: 28px 14px;
-  background-position: 8px 13px;;
+  background-position: 8px 13px;
 }
 
 .social-button-fb {
@@ -1736,7 +1779,7 @@ input[type="radio"].visually-hidden {
   background-image: url(../img/icon-insta.svg);
   background-repeat: no-repeat;
   background-size: 21px 22px;
-  background-position: 11px 8px;;
+  background-position: 11px 8px;
 }
 
 .feedback-block {
@@ -2539,6 +2582,7 @@ input[type="radio"].visually-hidden {
 
   background-image: url(../img/checkbox-off.svg);
   background-repeat: no-repeat;
+  opacity: 0.77;
 }
 
 .filter-checkbox:checked + label::before {
@@ -2552,6 +2596,12 @@ input[type="radio"].visually-hidden {
 
   background-image: url(../img/checkbox-on.svg);
   background-repeat: no-repeat;
+  opacity: 0.77;
+}
+
+.filter-checkbox:checked:hover + label::before,
+.filter-checkbox:hover + label::before {
+ opacity: 1;
 }
 
 .filter-checkbox:disabled + label,
@@ -2571,6 +2621,10 @@ input[type="radio"].visually-hidden {
           user-select: none;
 }
 
+.filter-checkbox:focus + label {
+  box-shadow: 0px 0px 2px blue;
+}
+
 .filter-radio + label::before {
   content: "";
   position: absolute;
@@ -2582,6 +2636,7 @@ input[type="radio"].visually-hidden {
 
   background-image: url(../img/radio-off.svg);
   background-repeat: no-repeat;
+  opacity: 0.77;
 }
 
 .filter-radio:checked + label::before {
@@ -2595,11 +2650,21 @@ input[type="radio"].visually-hidden {
 
   background-image: url(../img/radio-on.svg);
   background-repeat: no-repeat;
+  opacity: 0.77;
+}
+
+.filter-radio:checked:hover + label::before,
+.filter-radio:hover + label::before {
+ opacity: 1;
 }
 
 .filter-radio:disabled + label,
 .filter-radio:disabled + label::before {
   opacity: 0.4;
+}
+
+.filter-radio:focus + label {
+  box-shadow: 0px 0px 2px blue;
 }
 
 .filter-apply-button {

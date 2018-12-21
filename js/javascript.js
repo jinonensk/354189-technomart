@@ -1,8 +1,28 @@
+// for bookmarks
+const buttonBookmark = [].slice.call(document.querySelectorAll('.button-add-to-bookmarks'),0);
+
+// for boy items
 const buyItemButton = [].slice.call(document.querySelectorAll('.button-buy-item'),0);
 const itemAddedPopup = document.querySelector('.popup-item-added');
 
 const addedPopupClose = itemAddedPopup.querySelector('.button-close');
 const continueShopping = itemAddedPopup.querySelector('.popup-button-continue');
+
+// bookmarks
+buttonBookmark.forEach(function(item) {
+  item.addEventListener('click', function(evt) {
+    let itemsInBookmarks = document.querySelector('.button-bookmarks .quantity');
+    let itemInBookmarskBtn = document.querySelector('.button-bookmarks');
+    let newQuantity = Number(itemsInBookmarks.textContent) + 1;
+    evt.preventDefault();
+
+    itemsInBookmarks.textContent = newQuantity;
+
+    if (!itemInBookmarskBtn.classList.contains('button-full')) {
+      itemInBookmarskBtn.classList.add('button-full');
+    };
+  })
+});
 
 // buy item
 buyItemButton.forEach(function(item) {
@@ -15,8 +35,8 @@ buyItemButton.forEach(function(item) {
     itemsInCart.textContent = newQuantity;
     itemAddedPopup.classList.add('popup-show');
 
-    if (!itemInCartBtn.classList.contains('button-cart-full')) {
-      itemInCartBtn.classList.add('button-cart-full');
+    if (!itemInCartBtn.classList.contains('button-full')) {
+      itemInCartBtn.classList.add('button-full');
     };
   })
 });
