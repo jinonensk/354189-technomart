@@ -1,55 +1,55 @@
 @font-face {
-  font-family: 'Cuprum';
+  font-family: "Cuprum";
   font-style: normal;
   font-weight: 400;
-  src: local('Cuprum Regular'),
-       url(../fonts/cuprum.woff) format('woff'),
-       url(../fonts/cuprum.woff2) format('woff2');
+  src: local("Cuprum Regular"),
+       url(../fonts/cuprum.woff) format("woff"),
+       url(../fonts/cuprum.woff2) format("woff2");
 }
 
 @font-face {
-  font-family: 'Cuprum';
+  font-family: "Cuprum";
   font-style: normal;
   font-weight: 700;
-  src: local('Cuprum Bold'),
-       url(../fonts/cuprumbold.woff) format('woff'),
-       url(../fonts/cuprumbold.woff2) format('woff2');
+  src: local("Cuprum Bold"),
+       url(../fonts/cuprumbold.woff) format("woff"),
+       url(../fonts/cuprumbold.woff2) format("woff2");
 }
 
 @font-face {
-  font-family: 'Cuprum';
+  font-family: "Cuprum";
   font-style: italic;
   font-weight: 400;
-  src: local('Cuprum Italic'),
-       url(../fonts/cuprumitalic.woff) format('woff'),
-       url(../fonts/cuprumitalic.woff2) format('woff2');
+  src: local("Cuprum Italic"),
+       url(../fonts/cuprumitalic.woff) format("woff"),
+       url(../fonts/cuprumitalic.woff2) format("woff2");
 }
 
 @font-face {
-  font-family: 'Cuprum';
+  font-family: "Cuprum";
   font-style: italic;
   font-weight: 700;
-  src: local('Cuprum Bold Italic'),
-       url(../fonts/cuprumbolditalic.woff) format('woff'),
-       url(../fonts/cuprumbolditalic.woff2) format('woff2');
+  src: local("Cuprum Bold Italic"),
+       url(../fonts/cuprumbolditalic.woff) format("woff"),
+       url(../fonts/cuprumbolditalic.woff2) format("woff2");
 }
 
 @font-face {
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: local('PT Sans Italic'),
-       url(../fonts/ptsans.woff) format('woff'),
-       url(../fonts/ptsans.woff2) format('woff2');
+  src: local("PT Sans Italic"),
+       url(../fonts/ptsans.woff) format("woff"),
+       url(../fonts/ptsans.woff2) format("woff2");
 }
 
 @font-face {
-  font-family: 'PT Sans';
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: local('PT Sans Bold'),
-       url(../fonts/ptsansbold.woff) format('woff'),
-       url(../fonts/ptsansbold.woff2) format('woff2');
+  src: local("PT Sans Bold"),
+       url(../fonts/ptsansbold.woff) format("woff"),
+       url(../fonts/ptsansbold.woff2) format("woff2");
 }
 
 body {
@@ -306,7 +306,7 @@ input[type="radio"].visually-hidden {
 }
 
 .button-bookmarks::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 17px;
   top: 12px;
@@ -326,7 +326,7 @@ input[type="radio"].visually-hidden {
 }
 
 .button-cart::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 19px;
   top: 12px;
@@ -432,7 +432,7 @@ input[type="radio"].visually-hidden {
 }
 
 .main-header-phone::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 14px;
   top: 10px;
@@ -443,7 +443,7 @@ input[type="radio"].visually-hidden {
   background-image: url(../img/icon-phone.svg);
 }
 
-.main-header-adress {
+.main-header-address {
   display: block;
   margin: 0px;
   padding: 0;
@@ -611,6 +611,8 @@ input[type="radio"].visually-hidden {
   width: 100%;
   height: 100%;
 
+  vertical-align: middle;
+
   background-color: #ffffff;
 }
 
@@ -647,7 +649,7 @@ input[type="radio"].visually-hidden {
 }
 
 .button-my-orders::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 7px;
   left: 88px;
@@ -1071,7 +1073,7 @@ input[type="radio"].visually-hidden {
   color: #a9a9a9;
 }
 
-.no-discaunt {
+.no-discount {
   visibility: hidden;
 }
 
@@ -1185,7 +1187,7 @@ input[type="radio"].visually-hidden {
 }
 
 .button-buy-item::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 11px;
   top: 9px;
@@ -1354,7 +1356,7 @@ input[type="radio"].visually-hidden {
 }
 
 .services-slider-controls::after {
-  content: '';
+  content: "";
   position: absolute;
   right: -10px;
   top: -48px;
@@ -1405,7 +1407,6 @@ input[type="radio"].visually-hidden {
   padding: 0;
 
   -webkit-box-shadow:  #000000;
-
           box-shadow:  #000000
 }
 
@@ -1551,7 +1552,7 @@ input[type="radio"].visually-hidden {
 }
 
 .transportation-companies li::before {
-  content: '';
+  content: "";
   position: absolute;
   left: -34px;
   top: 10px;
@@ -1598,6 +1599,7 @@ input[type="radio"].visually-hidden {
 
 .contacts .button {
   width: 100%;
+  margin-right: 0;
 }
 
 .contacts-button-map {
@@ -1732,17 +1734,22 @@ input[type="radio"].visually-hidden {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-     -ms-flex-pack: end;
-   justify-content: flex-end;
+  -webkit-box-pack: start;
+     -ms-flex-pack: start;
+   justify-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 170px;
   min-height: 50px;
   margin: 0;
+  margin-bottom: 21px;
   padding: 0;
 
   list-style: none;
+}
+
+.social-list li {
+  margin-bottom: 5px;
 }
 
 .social-list a {
@@ -1789,21 +1796,27 @@ input[type="radio"].visually-hidden {
   -webkit-box-pack: justify;
      -ms-flex-pack: justify;
    justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 300px;
   min-height: 50px;
+  margin-bottom: 21px;
 }
 
 .feedback-block-item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 140px;
   margin: 0px;
+  margin-bottom: 5px;
 
   font-size: 16px;
   line-height: 18px;
   color: #ffffff;
 }
 
-.feedback-block-item:last-child {
-  padding-left: 53px;
+.developers {
+  padding-left: 29px;
 }
 
 .feedback-block a {
@@ -2607,6 +2620,8 @@ input[type="radio"].visually-hidden {
 .filter-checkbox:disabled + label,
 .filter-checkbox:disabled + label::before {
   opacity: 0.4;
+
+  pointer-events: none;
 }
 
 .filter-power-type label {
@@ -2661,6 +2676,8 @@ input[type="radio"].visually-hidden {
 .filter-radio:disabled + label,
 .filter-radio:disabled + label::before {
   opacity: 0.4;
+
+  pointer-events: none;
 }
 
 .filter-radio:focus + label {
@@ -2701,7 +2718,6 @@ input[type="radio"].visually-hidden {
   -webkit-box-pack: start;
      -ms-flex-pack: start;
    justify-content: flex-start;
-
   margin-bottom: 21px;
   padding: 9px 20px;
   padding-right: 5px;
@@ -2803,9 +2819,11 @@ input[type="radio"].visually-hidden {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0px;
   margin-top: 31px;
-  margin-bottom: 60px;
+  margin-bottom: 55px;
   padding: 0px;
 
   list-style: none;
@@ -2814,6 +2832,7 @@ input[type="radio"].visually-hidden {
 .pagination-list a {
   display: block;
   padding: 10px 15px;
+  margin-bottom: 5px;
 
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;

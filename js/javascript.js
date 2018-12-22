@@ -94,11 +94,11 @@ if (document.querySelector('.contacts .button')) {
   const letterPopup = document.querySelector('.popup-letter');
 
   const letterClose = letterPopup.querySelector('.button-close');
-  const letterForm = letterPopup.querySelector("form");
+  const letterForm = letterPopup.querySelector('form');
 
   const userName = letterPopup.querySelector('[name=user-name]');
   const userEmail = letterPopup.querySelector('[name=user-email]');
-  const letterMessage = letterPopup.querySelector("[name=user-text]");
+  const letterMessage = letterPopup.querySelector('[name=user-text]');
 
   let isStorageSupport = true;
   let storage = '';
@@ -126,16 +126,16 @@ if (document.querySelector('.contacts .button')) {
   letterClose.addEventListener('click', function(evt) {
     evt.preventDefault();
     letterPopup.classList.remove('popup-show');
-    letterPopup.classList.remove("popup-letter-error");
+    letterPopup.classList.remove('popup-letter-error');
   });
 
   letterForm.addEventListener('submit', function(evt) {
 
     if (!userName.value || !userEmail.value || !letterMessage.value) {
       evt.preventDefault();
-      letterPopup.classList.remove("popup-letter-error");
+      letterPopup.classList.remove('popup-letter-error');
       letterPopup.offsetWidth = letterPopup.offsetWidth;
-      letterPopup.classList.add("popup-letter-error");
+      letterPopup.classList.add('popup-letter-error');
     } else {
 
       if (isStorageSupport) {
@@ -151,7 +151,7 @@ if (document.querySelector('.contacts .button')) {
       if (evt.keyCode === 27) {
         evt.preventDefault();
         letterPopup.classList.remove('popup-show');
-        letterPopup.classList.remove("popup-letter-error");
+        letterPopup.classList.remove('popup-letter-error');
       };
     };
   });
@@ -175,10 +175,6 @@ if (document.querySelector('.slider-button')) {
       } else {
         sliderInputs[0].checked = true
       };
-
-      //sliderInputs[0].checked === true;
-      //? sliderInputs[1].checked = true;
-      //: sliderInputs[0].checked = true;
     })
   });
 };
