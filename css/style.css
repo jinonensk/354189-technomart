@@ -178,6 +178,26 @@ input[type="radio"].visually-hidden {
           box-shadow: 0px 5px 0px #b52933;
 }
 
+.main-header-logo a:hover,
+.main-header-logo a:focus,
+.footer-logo a:hover,
+.footer-logo a:focus {
+  background-color: #ca2c37;
+  -webkit-box-shadow: 0px 5px 0px #a9252e;
+          box-shadow: 0px 5px 0px #a9252e;
+}
+
+.main-header-logo a:active,
+.footer-logo a:active {
+  background-color: #ba2732;
+  -webkit-box-shadow: 0px 5px 0px #8e1e26;
+          box-shadow: 0px 5px 0px #8e1e26;
+}
+
+.index-logo {
+  pointer-events: none;
+}
+
 .main-header-search {
   position: relative;
 
@@ -669,15 +689,16 @@ input[type="radio"].visually-hidden {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-     -ms-flex-pack: center;
-   justify-content: center;
+  -webkit-box-pack: start;
+     -ms-flex-pack: start;
+   justify-content: start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 940px;
   margin: 0;
   margin-bottom: 59px;
   padding: 0;
+  padding-left: 25px;
+  padding-right: 25px;
 
   border-bottom: 5px solid #293449;
 
@@ -714,6 +735,22 @@ input[type="radio"].visually-hidden {
 /* Offers block. Start */
 .offers-block {
   margin-bottom: 30px;
+}
+
+.offers-item-columns {
+  -webkit-box-pack: start;
+     -ms-flex-pack: start;
+   justify-content: flex-start;
+   -ms-flex-wrap: wrap;
+       flex-wrap: wrap;
+}
+
+.offers-item-columns .offers-block-item {
+  margin-right: 20px;
+}
+
+.offers-item-columns .offers-block-item:nth-child(3n) {
+  margin-right: 0;
 }
 
 .column-offers {
@@ -809,21 +846,19 @@ input[type="radio"].visually-hidden {
   background-position: 191px 33px;
 }
 
-.offers-block-item .flag {
-  position:absolute;
-  top:-1px;
-  right:-1px;
-  z-index:20;
+.offers-block-item.flag-new::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  z-index: 20;
 
-  width:60px;
-  height:60px;
+  width: 60px;
+  height: 60px;
 
-  text-indent:-1000px;
-  overflow: hidden;
-}
-
-.offers-block-item .flag-new {
-  background:url(../img/new-flag.png) no-repeat 0 0;
+  background-image: url(../img/new-flag.png);
+  background-repeat: no-repeat;
+  background-position:  0 0;
 }
 
 .slides {
@@ -1109,7 +1144,8 @@ input[type="radio"].visually-hidden {
   border-left-color: #ee3643;
 }
 
-.catalog-item .flag {
+.catalog-item.flag-new::before {
+  content: "";
   position: absolute;
   top: -1px;
   right: -1px;
@@ -1118,12 +1154,9 @@ input[type="radio"].visually-hidden {
   width: 60px;
   height: 60px;
 
-  text-indent: -1000px;
-
-  overflow: hidden;
-}
-.catalog-item .flag-new {
-  background:url(../img/new-flag.png) no-repeat 0 0;
+  background-image: url(../img/new-flag.png);
+  background-repeat: no-repeat;
+  background-position:  0 0;
 }
 
 .actions {
@@ -1251,9 +1284,9 @@ input[type="radio"].visually-hidden {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-     -ms-flex-pack: justify;
-   justify-content: space-between;
+  -webkit-box-pack: start;
+     -ms-flex-pack: start;
+   justify-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0;
@@ -1405,9 +1438,6 @@ input[type="radio"].visually-hidden {
   min-height: 200px;
   margin: 0;
   padding: 0;
-
-  -webkit-box-shadow:  #000000;
-          box-shadow:  #000000
 }
 
 .services-slider h3 {
@@ -1653,12 +1683,12 @@ input[type="radio"].visually-hidden {
   display: flex;
   -webkit-box-pack: justify;
      -ms-flex-pack: justify;
-   justify-content: space-between;
+   justify-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  width: 550px;
+  width: 548px;
 
   list-style: none;
 }
@@ -1682,14 +1712,27 @@ input[type="radio"].visually-hidden {
 
 .footer-navigation-bottom .site-navigation {
   width: 525px;
+  margin-bottom: 50px;
 }
 
 .footer-navigation-top {
   margin-top: 37px;
+  margin-bottom: 20px;
+}
+
+.footer-navigation-top li {
+  margin-right: 59px;
+}
+
+.footer-navigation-top li:nth-child(5n) {
+  margin-right: 0;
 }
 
 .site-navigation a {
+  display: inline-block;
+
   font-size: 18px;
+  vertical-align: middle;
   line-height: 24px;
   color: #ffffff;
 }
@@ -1702,6 +1745,14 @@ input[type="radio"].visually-hidden {
 .site-navigation a:active {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-navigation-bottom li {
+  margin-right: 59px;
+}
+
+.footer-navigation-bottom li:nth-child(4n) {
+  margin-right: 0;
 }
 
 .footer-navigation-bottom a {
@@ -1744,6 +1795,7 @@ input[type="radio"].visually-hidden {
   margin: 0;
   margin-bottom: 21px;
   padding: 0;
+  padding-left: 70px;
 
   list-style: none;
 }
@@ -2158,7 +2210,7 @@ input[type="radio"].visually-hidden {
           box-shadow: 0 20px 40px rgba(0,0,0,.75);
 }
 
-.popup-item-added h1 {
+.popup-item-added h2 {
   margin: 0;
   margin-left: 53px;
   margin-bottom: 38px;
@@ -2391,9 +2443,7 @@ input[type="radio"].visually-hidden {
 .filters h3 {
   margin: 0px;
   margin-bottom: 11px;
-  padding: 11px 20px;
-  -webkit-padding-after: 9px;
-          padding-block-end: 9px;
+  padding: 10px 20px;
 
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
@@ -2559,7 +2609,6 @@ input[type="radio"].visually-hidden {
 
 .filter-manufacturers li {
   margin-bottom: 20px;
-  padding-left: 34px;
 }
 
 .filter-power-type {
@@ -2569,13 +2618,13 @@ input[type="radio"].visually-hidden {
 
 .filter-power-type li {
   margin-bottom: 20px;
-  padding-left: 34px;
 }
 
 .filter-manufacturers label {
   position: relative;
 
   display: block;
+  padding-left: 34px;
 
   cursor: pointer;
   -webkit-user-select: none;
@@ -2587,7 +2636,7 @@ input[type="radio"].visually-hidden {
 .filter-checkbox + label::before {
   content: "";
   position: absolute;
-  left: -34px;
+  left: 0;
   top: -1px;
 
   width: 25px;
@@ -2601,7 +2650,7 @@ input[type="radio"].visually-hidden {
 .filter-checkbox:checked + label::before {
   content: "";
   position: absolute;
-  left: -34px;
+  left: 0px;
   top: -1px;
 
   width: 25px;
@@ -2628,6 +2677,7 @@ input[type="radio"].visually-hidden {
   position: relative;
 
   display: block;
+  padding-left: 34px;
 
   cursor: pointer;
   -webkit-user-select: none;
@@ -2643,7 +2693,7 @@ input[type="radio"].visually-hidden {
 .filter-radio + label::before {
   content: "";
   position: absolute;
-  left: -35px;
+  left: 0px;
   top: -2px;
 
   width: 25px;
@@ -2657,7 +2707,7 @@ input[type="radio"].visually-hidden {
 .filter-radio:checked + label::before {
   content: "";
   position: absolute;
-  left: -35px;
+  left: 0px;
   top: -2px;
 
   width: 25px;
